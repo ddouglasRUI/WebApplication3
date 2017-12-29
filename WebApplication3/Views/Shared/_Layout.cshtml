@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>You're on @ViewBag.Title</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../bootstrap/vendor/jquery/jquery.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../bootstrap/css/half-slider.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="../bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ 
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="~/Home">RUI - OMCF</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="~/Home/ApproveRequests">
+                            Approve Requests
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Codes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Create Request</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/files/OMCF User Instructions.pdf">Instructions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Home/FAQ">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        <hr />
+        <br />
+        @RenderBody()
+    </div>
+
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">OMCF for RUI: Welcome @User.Identity.Name! <br> <a href="html_images.asp">Log Out</a></p>
+        </div>
+        <!-- /.container -->
+    </footer>
+</body>
+</html>
