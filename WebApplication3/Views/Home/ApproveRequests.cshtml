@@ -2,12 +2,14 @@
     ViewBag.Title = "Approve Requests";
 }
 
-<br />
-<div class="jumbotron">
-<center><h1>OMCF: @ViewBag.Message</h1> </center> <hr />
-
 <script type="text/javascript" src="../Scripts/jquery-1.10.2.js"></script>
-<script type="text/javascript">
+<br>
+<div class="jumbotron">
+    <center><h1>@ViewBag.Title</h1> </center>
+    <hr />
+    <center> <p class="lead">You are using Restaurant Unlimited's OMCF system which allows you to request menu changes, look up previous requests, et al. Below are descriptions for each respective page on OMCF.</p></center>
+
+    <script type="text/javascript">
         function getProducts() {
             $.getJSON("api/Requests",
                 function (data) {
@@ -16,16 +18,16 @@
                     // Loop through the list of products.
                     $.each(data, function (key, val) {
                         // Add a table row for the product.
-                        var goLiveDate =  val.GoLiveDate.substr(0, 10) ;
+                        var goLiveDate = val.GoLiveDate.substr(0, 10);
 
-                        var subDate =  val.RequestSubmittedDate.substr(0, 10);
+                        var subDate = val.RequestSubmittedDate.substr(0, 10);
                         //var displayGoLiveDate = $.datepicker.formatDate("mm/dd/yyyy", val.GoLiveDate)
                         var row =
                             '<td>' + val.RequestID + '</td>' +
                             '<td>' + val.RequestorID + '</td>' +
                             '<td>' + val.RestaurantID + '</td>' +
                             '<td>' + val.RequestSubmittedDate + '</td>' +
-                            '<td>' + val.GoLiveDate  + '</td>' +
+                            '<td>' + val.GoLiveDate + '</td>' +
                             '<td>' + val.CreateUser + '</td>' +
                             '<td>' + 0 + '</td>' +  //need add
                             '<td>' + 0 + '</td>' + // need change
@@ -38,7 +40,7 @@
                             .appendTo($('#ContentPlaceHolder1_GridViewApproveRequests'));
                     });
                 });
-            }
+        }
 
         $(document).ready(getProducts).ready(addRowHandlers);
 
@@ -53,6 +55,7 @@
                 }(rows[i]);
             }
         }
-   </script>
+    </script>
 
-    </div>
+</div>
+<hr />

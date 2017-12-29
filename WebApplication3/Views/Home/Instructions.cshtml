@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Instructions";
+}
+
+<style>
+     .responsive-object {
+  position: relative;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.responsive-object object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<br>
+<div class="jumbotron">
+    <center><h1>@ViewBag.Title</h1> </center>
+    <hr />
+    <center> <p class="lead">You are using Restaurant Unlimited's OMCF system which allows you to request menu changes, look up previous requests, et al. Below are descriptions for each respective page on OMCF.</p></center>
+
+    <div class="responsive-object">
+        <center><object width="800" height="600" data="../files/OMCF%20User%20Instructions.pdf"></object></center>
+        </div>
+
+    </div>
+<hr />

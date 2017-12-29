@@ -26,5 +26,34 @@ namespace WebApplication3.Controllers
 
             return View();
         }
+
+        public ActionResult ManageCodes()
+        {
+            ViewBag.Message = "Code Management";
+
+            return View();
+        }
+
+        public ActionResult Statistics()
+        {
+            ViewBag.Message = "Statistics Page";
+
+            return View();
+        }
+
+        public ActionResult CreateRequest()
+        {
+            ViewBag.Message = "Create Request";
+
+            return View();
+        }
+
+        public ActionResult Instructions()
+        {
+            ViewBag.Message = "Instructions";
+
+            return View();
+        }
+
     }
 }
